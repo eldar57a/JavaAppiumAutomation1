@@ -1,13 +1,12 @@
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class MainClassTest {
     @Test
-    public void testGetLocalNumber(){
+    public void testGetClassNumber(){
         MainClass mainClass = new MainClass();
-        int actualNumber = mainClass.getLocalNumber();
-        int expectedNumber = 14;
-        assertEquals("getLocalNumber() Метод который должен возвращать 14",expectedNumber,actualNumber);
+        int classNumber = mainClass.getClassNumber();
+        assertTrue("getClassNumber() Этот метод должен возвращать больше 45",classNumber > 45);
     }
 }
