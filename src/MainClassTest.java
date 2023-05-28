@@ -4,9 +4,10 @@ import static org.junit.Assert.assertTrue;
 
 public class MainClassTest {
     @Test
-    public void testGetClassNumber(){
+    public void testGetClassString(){
         MainClass mainClass = new MainClass();
-        int classNumber = mainClass.getClassNumber();
-        assertTrue("getClassNumber() Этот метод должен возвращать больше 45",classNumber > 45);
+        String classString = mainClass.getClassString();
+        assertTrue("getClassString() Метод должен возвращать строку Hello, World или hello, World", classString.startsWith("Hello") || classString.startsWith("hello"));
     }
+
 }
